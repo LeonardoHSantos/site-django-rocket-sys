@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Cadastre-se{% endblock %}
+{% block content %}
+<div class="form-user">
+
+    {% if user.is_authenticated %}
+    <div style="width: 90%; height: 60vh; background-color: var(--color-base-1); margin: 10px;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; gap: 10px;">
+                <p>{{user.username}}, você já está conectado.</p>
+                <p>deseja sair? <a style="color: red;" href="{% url 'logout' %}">Sair</a></p>
+                
+            </div>
+        </div>
+
+    {% else %}
+        <div class="form-decoration">
+            <div class="form-image-decoration">
+                <h3>Tudo começa com o primeiro passo.</h3>
+                <div id="image-astro">
+                    <img src="{% static 'imagem vetor 2089.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <form action="{% url 'login' %}" method="POST" id="form-login-account">
+            <div class="info-extra-form-user">
+                <h1>Login</h1>
+            </div>
+            {% csrf_token %}
+
+            <!-- --------------------- -->
+            <label for="email">e-mail</label>
+            <div class="block-inputs-form">
+                {{form_register.email}}
+            </div>
+            
+            <!-- --------------------- -->
+            <label for="password">senha</label>
+            <div class="block-inputs-form">
+                {{form_register.password}}
+            </div>
+            <span class="status-password-check msgs-check-inputs">
+                <p class="input-password-check"></p>
+                <div class="input-password-check-animation-1">
+                    <div class="input-password-check-animation-2"></div>
+                </div>
+            </span>
+            <!-- --------------------- -->
+            <span class="status-email-check msgs-check-inputs">
+                <p class="input-email-check"></p>
+                {% if user_not_found %}
+                    <p class="msg-error">usuário ou senha inválido.</p>
+                {% else %}
+                    <p class="msg-error"></p>
+                {% endif %}
+            </span>
+            <!-- --------------------- -->
+            <span class="show-password">
+                <p onclick="toglleShowPassword();">ver senha</p>
+            </span>
+            
+            <!-- --------------------- -->
+            <input type="button" value="Entrar" id="btn-submit"  onclick="postFormLogin(this);">
+            <!-- --------------------- -->
+            <div class="info-extra-form-user">
+                <a href="{% url 'register_new_user' %}">Ainda não tem uma conta?</a>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'check_input.js' %}"></script>
+    <script src="{% static 'login.js' %}"></script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container-principal display-flex all-center">
+    <div class="container-banner-principal">
+        <div class="info-texto-banner-2">
+                <div class="container-info-banner">
+                    <div class="info-texto-banner-1">
+                        <h3>Desenvolvimento de sistemas web de forma <b>ágil</b>.</h3>
+                        <div class="link-info-banner-1">
+                            <a href="#">ver mais</a>
+                        </div>
+                </div>
+                <div class="info-image-bunner">
+                    <div>
+                        <h3 style="margin: 10px;">Tire seu projeto do papel</h3>
+                        <p style="margin: 10px;"><b>é a hora</b>, selecione uma opção abaixo e conte o que você precisa:</p>
+                        <div class="container-info-banner">
+                            <div class="info-banner option-1-info-banner">
+                                <p><b>direto ao ponto</b>, já sabe o que precisa?</p>
+                            </div>
+                            <div class="info-banner">
+                                <p><b>está com dúvidas?</b> te ajudamos a iniciar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-principal display-flex all-center">
+    <div class="container-info-dados">
+        <h1>Era dos Dados</h1>
+        <h3 class="subtitle-card-dados" id="subtitle-card-dados"></h3>
+        <div class="bloco-info-dados display-flex">
+            <div class="content-info-dados">
+                <div class="header-card-info-dados">
+                    <h3>coleta de dados</h3>
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <p>criamos novas fontes de dados ou conectamos a uma existênte.</p>
+            </div>
+            <div class="content-info-dados">
+                <div class="header-card-info-dados">
+                    <h3>tratmento de dados</h3>
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <p>processamos os dados conforme a sua necessidade.</p>
+            </div>
+            <div class="content-info-dados">
+                <div class="header-card-info-dados">
+                    <h3>relatórios personalizados</h3>
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <p>
+                    não poderia faltar os dashboards. <br>
+                </p>
+                <a href="#">ver opções relatórios</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-support">
+    <div class="content-support">
+        <div>
+            <img src="{% static 'imagem vetor 203-2.png' %}" alt="">            
+        </div>
+    </div>
+    <div class="content-support-text">
+        <h1>Suporte do seu jeito</h1>
+        <p>Sabemos da importância de uma
+            <b style="
+            background-color: var(--color-dark-1);
+            color: var(--color-white-1);
+            padding: 0px 3px;">
+            comunicação eficaz,
+            </b>
+            por isso oferecemos o serviço de
+            <b>
+                suporte todos os dias
+            </b>
+            da semana
+            <b>
+                sem burocrácias.
+            </b>
+        </p>
+        <a href="#">ver mais</a>
+    </div>
+</div>
+
+<div class="container-support">
+    <div class="content-support-text">
+        <h1>Pense no futuro</h1>
+        <p>Integrar com as melhores ferramentas hoje
+            <b>
+            será o seu direncial amanhã,
+            </b>
+            <br>
+            agilidade e automação para fazer seus projetos decolarem.
+        </p>
+        <a href="#">ver mais</a>
+    </div>
+    <div class="content-support">
+        <div>
+            <img src="{% static 'imagem vetor 200.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container-support">
+    <div class="content-support">
+        <div>
+            <img src="{% static 'imagem vetor 205.png' %}" alt="">
+        </div>
+    </div>
+    <div class="content-support-text">
+        <h1>Serviços escaláveis</h1>
+        <p>Desenvolvemos serviços baseados em nuvem, ou seja, escalabilidade de ponta.</p>
+        <a href="#">ver mais</a>
+    </div>
+</div>
+
+<div class="container-support card-100">
+    <div class="content-support-text">
+        <h1>Relatórios personalizados</h1>
+        <p id="text-2"></p>
+        <!-- <p id="text-2">Para facilitar a tomadas de decisões nada melhor que visuais detalhados, confira e escolha a melhor opção para você.</p> -->
+        <a href="#">ver mais</a>
+    </div>
+    <div class="content-support">
+        <div>
+            <img src="{% static 'imagem vetor 201-2.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    var texto_1 = "veja o que podemos fazer por você... ";
+    var i = 0;
+    var speed = 55;
+    function typeWriter() {
+        if (i < texto_1.length) {
+            document.querySelector(".subtitle-card-dados").innerHTML += texto_1.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7
+    }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.target.id === 'subtitle-card-dados' && entry.isIntersecting) {
+            typeWriter();
+        }
+        })
+    }, options)
+    observer.observe(document.querySelector('#subtitle-card-dados'));
+
+
+
+    // -------------------------------------------
+
+
+    var texto_2 = "Para facilitar a tomadas de decisões nada melhor que visuais detalhados, confira e escolha a melhor opção para você.";
+    var i_2 = 0;
+    var speed_2 = 10;
+    function typeWriter_2() {
+        if (i_2 < texto_2.length) {
+            document.querySelector("#text-2").innerHTML += texto_2.charAt(i_2);
+            i_2++;
+            setTimeout(typeWriter_2, speed_2);
+        }
+        document.querySelector(".card-100").classList.add("classAnimate_open");
+    }
+    
+    const observer_2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.target.id === 'text-2' && entry.isIntersecting) {
+            typeWriter_2();
+        }
+        })
+    }, options)
+    observer_2.observe(document.querySelector('#text-2'));
+</script>
+
+
+{% endblock %}

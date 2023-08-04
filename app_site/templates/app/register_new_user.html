@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Cadastre-se{% endblock %}
+{% block content %}
+<div class="form-user">
+    <div class="form-decoration">
+        <div class="form-image-decoration">
+            <h3>Tudo começa com o primeiro passo.</h3>
+            <div id="image-astro">
+                <img src="{% static 'imagem vetor 2089.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <form action="{% url 'register_new_user' %}" method="POST" id="form-create-account">
+        <div class="info-extra-form-user">
+            <h1>Cadastro</h1>
+        </div>
+        {% csrf_token %}
+
+        <label for="username">primeiro nome</label>
+        <div class="block-inputs-form">
+            {{form_register.name}}
+        </div>
+        <span class="status-username-check msgs-check-inputs">
+            <p class="input-username-check"></p>
+            <p class="msg-error"></p>
+        </span>
+        <!-- --------------------- -->
+        <label for="email">e-mail</label>
+        <div class="block-inputs-form">
+            {{form_register.email}}
+        </div>
+        <span class="status-email-check msgs-check-inputs">
+            <p class="input-email-check"></p>
+            {% if user_exists %}
+                <p class="msg-error">usuário indisponível.</p>
+            {% else %}
+                <p class="msg-error"></p>
+            {% endif %}
+        </span>
+        <!-- --------------------- -->
+        <label for="password_1">senha</label>
+        <div class="block-inputs-form">
+            {{form_register.password_1}}
+        </div>
+        <span class="status-password_1-check msgs-check-inputs">
+            <div>
+                <p class="msg-error"></p>
+            </div>
+            <p class="input-password_1-check"></p>
+            <div class="input-password_1-check-animation-1">
+                <div class="input-password_1-check-animation-2"></div>
+            </div>
+        </span>
+        <!-- --------------------- -->
+        <label for="password_2">confirme sua senha</label>
+        <div class="block-inputs-form">
+            {{form_register.password_2}}
+        </div>
+        <span class="status-email-check msgs-check-inputs">
+            <p class="input-password_2-check"></p>
+            <p class="error-passwords msg-error"></p>
+        </span>
+        <!-- --------------------- -->
+        <span class="show-password">
+            <p onclick="toglleShowPassword();">ver senhas</p>
+        </span>
+        <!-- --------------------- -->
+        <input type="button" value="Cadastrar" id="btn-submit" disabled class="disabled-active" onclick="postFormCreateAccount(this);">
+        <!-- --------------------- -->
+        <div class="info-extra-form-user">
+            <a href="{% url 'login' %}">Já tem uma conta?</a>
+        </div>
+    </form>
+</div>
+
+<script src="{% static 'check_input.js' %}"></script>
+<script src="{% static 'createAccount.js' %}"></script>
+
+{% endblock %}

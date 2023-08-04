@@ -1,0 +1,219 @@
+.form-user {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: animation_form_page 1s ease;
+}
+@keyframes animation_form_page {
+    from {
+        opacity: 0;
+    }
+    t0 {
+        opacity: 1;
+    }
+}
+#form-create-account,
+#form-login-account {
+    width: 450px;
+    height: auto;
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white-1);
+    border-radius: 5px;
+    z-index: 1;
+    gap: 5px;
+}
+.block-inputs-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.block-inputs-form input {
+    width: 80%;
+}
+.block-inputs-form p {
+    width: 10% !important;
+}
+#form-create-account label,
+#form-create-account input,
+#form-login-account label,
+#form-login-account input {
+    width: 100%;
+}
+#form-create-account label,
+#form-login-account label {
+    margin-top: 3px;
+    font-weight: 600;
+    color: var(--color-dark-3);
+}
+#form-create-account input,
+#form-login-account input {
+    outline: none;
+    padding: 3px 8px;
+    font-size: 16px;
+    border: 1px solid;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    color: var(--color-dark-0);
+    background: var(--color-white-1);
+    border-color: var(--color-dark-0);
+}
+#form-create-account input::placeholder,
+#form-login-account input::placeholder {
+    font-size: 14px;
+    font-style: italic;
+}
+#form-create-account input[type="button"],
+#form-login-account input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 19px;
+    margin: 10px 0px;
+    color: var(--color-base-1);
+    border-radius: 5px;
+    border: 1px solid var(--color-base-1);
+    background: var(--color-base-3);
+    cursor: pointer;
+}
+.color-base-3 {
+    background: var(--color-base-3) !important;
+}
+
+#form-create-account input[type="button"]:hover,
+#form-login-account input[type="button"]:hover {
+    background: var(--color-dark-1);
+}
+.disabled-active {
+    background: var(--color-dark-0) !important;
+}
+.input-invalid {
+    border: 1px solid red !important;
+}
+.input-valid {
+    border: 1px solid lime !important;
+}
+
+.msgs-check-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    gap: 10px;
+}
+.block-inputs-form > span,
+.block-inputs-form > span > p {
+    width: 10% !important;
+}
+.msg-error {
+    color: red;
+}
+/* ----------- OPTIONS EXTRA FORM USER -----------  */
+.info-extra-form-user {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
+}
+.info-extra-form-user h1 {
+    color: var(--color-dark-1);
+}
+.info-extra-form-user a {
+    padding: 5px;
+    font-weight: 600;
+    color: var(--color-base-3);
+}
+
+/* ----------- DECORATION FORM USER -----------  */
+.form-decoration {
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.form-image-decoration {
+    background: var(--color-white-1);
+}
+.form-image-decoration h3 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+.form-image-decoration img {
+    max-width: 87.5%;
+    transform: scale(1);
+    animation: animation_decoration_img 6s infinite ease-out;
+}
+@keyframes animation_decoration_img {
+    0% {
+        transform: scale(1);
+        transition: 2s;
+    }
+    25% {
+        transform: scale(1.1);
+        transition: 2s;
+    }
+    50% {
+        transform: scale(1);
+        transition: 2s;
+    }
+    75% {
+        transform: scale(1.1);
+        transition: 2s;
+    }
+    100% {
+        transform: scale(1);
+        transition: 2s;
+    }
+}
+
+
+/* ------- ANIMATION CHECK INPUT PASSWORD ------- */
+.input-password_1-check-animation-1 {
+    width: 100%;
+    height: 10px;
+    /* background: rgb(203, 203, 214); */
+    border-radius: 5px;
+    padding: 2px;
+}
+.input-password_1-check-animation-2 {
+    width: 0%;
+    height: 10px;
+    max-width: 99.80%;
+    border-radius: 5px;
+    background: red;
+    transition: .5s;
+}
+
+.show-password {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    color: var(--color-base-3);
+}
+.show-password p {
+    width: 160px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-dark-0);
+}

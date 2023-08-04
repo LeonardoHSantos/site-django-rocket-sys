@@ -1,0 +1,122 @@
+{% load static %}
+
+<header>
+    <div class="header-navbar">
+        <div class="logo-navbar">
+            <img src="{% static 'rocket-sys-logo-2.png' %}" alt="">
+        </div>
+        <div class="container-navbar">
+            <ul>
+                <li>
+                    <div class="menu-links">
+                        <a href="{% url 'home' %}">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-links">
+                        <p>Serviços</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <span class="menu-opcoes-dropdown">
+                        <div class="block-opcoes-menu">
+                            <h1>conteudo menu 1</h1>
+                        </div>
+                    </span>
+                </li>
+                <li>
+                    <div class="menu-links">
+                        <p>Integrações</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <span class="menu-opcoes-dropdown">
+                        <div class="block-opcoes-menu">
+                            <h1>conteudo menu 2</h1>
+                        </div>
+                    </span>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <div class="menu-links">
+                        <a href="{% url 'painel_user' %}">Painel</a>
+                    </div>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="navbar-area-usuario">
+            {% if user.is_authenticated %}
+                <p>olá, {{user.username}}</p>
+                <a href="{% url 'logout' %}" style="background: red !important;">Sair</a>
+            {% else %}
+                <a href="{% url 'login' %}">login</a>
+                <a href="{% url 'register_new_user' %}">cadastro</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="menu-mobile">
+        <i class="fa-solid fa-bars" id="btn-menu-mobile" onclick="showMenuMobile(this)"></i>
+    </div>
+    <div class="menu-mobile-menu">
+        <div class="navbar-area-usuario-mobile">
+            {% if user.is_authenticated %}
+                <p>olá, {{user.username}}</p>
+                <a href="{% url 'logout' %}" style="background: red !important;">Sair</a>
+            {% else %}
+                <a href="{% url 'login' %}">login</a>
+                <a href="{% url 'register_new_user' %}">cadastro</a>
+            {% endif %}
+        </div>
+        <div class="container-navbar-mobile">
+            <ul>
+                <li>
+                    <div class="menu-links">
+                        <a href="#">Home</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-links">
+                        <p>Serviços</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <span class="menu-opcoes-dropdown">
+                        <div class="block-opcoes-menu">
+                            <h1>conteudo menu 1</h1>
+                        </div>
+                    </span>
+                </li>
+                <li>
+                    <div class="menu-links">
+                        <p>Integrações</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <span class="menu-opcoes-dropdown">
+                        <div class="block-opcoes-menu">
+                            <h1>conteudo menu 2</h1>
+                        </div>
+                    </span>
+                </li>
+                
+                {% if user.is_authenticated %}
+                <li>
+                    <div class="menu-links">
+                        <a href="{% url 'painel_user' %}">Painel</a>
+                    </div>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+        
+    </div>
+</header>
+
+
+<script>
+    function showMenuMobile(element){
+        document.querySelector(".container-navbar-mobile").classList.toggle("active");
+        document.querySelector(".menu-mobile-menu").classList.toggle("active");
+        document.querySelector(".navbar-area-usuario-mobile").classList.toggle("active");
+        
+    }
+</script>
