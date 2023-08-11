@@ -10,7 +10,6 @@ from .backends import EmailBackend
 from .forms import NewUser, LoginUser
 
 
-
 # ----
 def home(request):
     if request.method == "GET":

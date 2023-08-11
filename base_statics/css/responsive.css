@@ -114,4 +114,16 @@
         width: 500px !important;
         max-width: 100% !important;
     }
+
+    .content-icons,
+    .container-list-footer,
+    .social-icons {
+        width: 100%;
+    }
+    .content-icons {
+        margin: 20px 0px;
+    }
+}
+.col-revert {
+    flex-direction: row-reverse;
 }

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Leona\OneDrive\Área de Trabalho\0 - demanda real\demanda_real\venv
+set VIRTUAL_ENV=C:\Users\Leona\OneDrive\Área de Trabalho\0 - demanda real\rocket_sys_site\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

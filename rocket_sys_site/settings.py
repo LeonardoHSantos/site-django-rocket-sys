@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'rocket_sys_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': config_app.DB_ENGINE,
         'HOST': config_app.DB_HOST,
         'USER': config_app.DB_USER,
         'PASSWORD': config_app.DB_PASSWORD,
