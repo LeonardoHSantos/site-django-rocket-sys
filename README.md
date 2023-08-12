@@ -9,6 +9,7 @@ Este é um site feito com Django Framework, trata-se de um projeto pessoal chama
 SECRET_KEY = 'crie uma chave Django e cole aqui, exemplo: django-insecure-s=mn=^-^31rm@an%h3...'
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["lista de hosts permitidos para POST, ..."] # http://127.0.0.1
 
 DATABASE_ENGINE_TYPE_PRODUCTION = True
 DB_HOST = "host_database"

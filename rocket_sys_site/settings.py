@@ -19,6 +19,7 @@ SECRET_KEY = config_app.SECRET_KEY
 DEBUG = config_app.DEBUG
 
 ALLOWED_HOSTS = config_app.ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = config_app.CSRF_TRUSTED_ORIGINS
 
 
 # Application definition
