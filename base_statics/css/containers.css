@@ -137,7 +137,7 @@
     color: var(--color-base-1);
 }
 .container-info-dados h1 {
-    font-size: 45px;
+    font-size: 35px;
     border-right: 4px solid transparent;
     padding-right: 6px;
 }
@@ -293,4 +293,11 @@
     max-width: 100%;
     margin: 3px;
     padding: 15px;
+}
+.content-support-text h1 {
+    font-size: 25px !important;
+    text-align: center;
+}
+.content-support-text p b {
+    color: var(--color-dark-1);
 }

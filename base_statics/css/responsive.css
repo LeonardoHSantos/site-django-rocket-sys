@@ -16,6 +16,7 @@
     .info-texto-banner-1 h3 {
         text-align: center;
         min-width: 273px;
+        font-size: 25px;
     }
     .link-info-banner-1 {
         justify-content: center;
@@ -23,6 +24,14 @@
     .link-info-banner-1 a {
         width: 195px;
         max-width: 100%;
+        text-align: center;
+    }
+    .info-image-bunner {
+        text-align: center;
+        width: 94%;
+    }
+    .content-support-text h1 {
+        font-size: 25px !important;
         text-align: center;
     }
 }
@@ -112,7 +121,7 @@
     }
     .content-info-dados {
         width: 500px !important;
-        max-width: 100% !important;
+        max-width: 80% !important;
     }
 
     .content-icons,
@@ -123,6 +132,13 @@
     .content-icons {
         margin: 20px 0px;
     }
+
+    .content-support {
+        width: 273px;
+        height: 252px;
+    }
+ 
+
 }
 .col-revert {
     flex-direction: row-reverse;
