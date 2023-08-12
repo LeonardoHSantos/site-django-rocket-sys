@@ -9,6 +9,8 @@ Este é um site feito com Django Framework, trata-se de um projeto pessoal chama
 SECRET_KEY = 'crie uma chave Django e cole aqui, exemplo: django-insecure-s=mn=^-^31rm@an%h3...'
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
+
+DATABASE_ENGINE_TYPE_PRODUCTION = True
 DB_HOST = "host_database"
 DB_USER = "username_database"
 DB_PASSWORD = "password_database"
@@ -20,4 +22,7 @@ DB_ENGINE = "django.db.backends.mysql"
 <p>
     Perceba que apontei para um servidor de banco de dados "mysql", para outros tipos acesse a documentação do Django acesse 
       <a href="https://docs.djangoproject.com/en/4.2/ref/databases/">Documentação versão 4.2 - databases</a>
-<p>
+</p>
+
+<h3>ATENÇÃO!!!</h3>
+<p>Se o valor de "DATABASE_ENGINE_TYPE_PRODUCTION" for definido com False será o arquivo settings.py utilizará como banco de dados o "db.sqlite3".</p>

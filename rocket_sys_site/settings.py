@@ -68,23 +68,24 @@ WSGI_APPLICATION = 'rocket_sys_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': config_app.DB_ENGINE,
-        'HOST': config_app.DB_HOST,
-        'USER': config_app.DB_USER,
-        'PASSWORD': config_app.DB_PASSWORD,
-        'NAME': config_app.DB_NAME,
-        'PORT': config_app.DB_PORT,
+if config_app.DATABASE_ENGINE_TYPE_PRODUCTION:
+    DATABASES = {
+        'default': {
+            'ENGINE': config_app.DB_ENGINE,
+            'HOST': config_app.DB_HOST,
+            'USER': config_app.DB_USER,
+            'PASSWORD': config_app.DB_PASSWORD,
+            'NAME': config_app.DB_NAME,
+            'PORT': config_app.DB_PORT,
+        }
     }
-}
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
