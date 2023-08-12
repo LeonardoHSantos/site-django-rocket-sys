@@ -16,7 +16,7 @@
     flex-direction: row;
 }
 .container-principal {
-    background: var(--color-white-1);
+    background: transparent;
 }
 /* BANNERS */
 .container-banner-principal {
@@ -64,7 +64,7 @@
 }
 .info-texto-banner-1 {
     padding: 9px;
-    width: 290px;
+    width: 320px;
     max-width: 90%;
     font-size: 25px;
     font-weight: 400;
@@ -72,7 +72,7 @@
     margin: 10px;
     box-shadow: var(--box-shadow-1);
     color: var(--color-white-1);
-    background: var(--color-base-3);
+    background: var(--color-base-4);
 }
 
 .info-texto-banner-2 {
@@ -83,11 +83,11 @@
 
 
 .info-image-bunner {
-    /* padding: 10px; */
     max-width: 100%;
-    box-shadow: var(--box-shadow-1);
-    border-radius: 5px;
     margin: 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-1);
+    background: var(--color-base-1);
 }
 .info-image-bunner img {
     max-width: 100%;
@@ -219,7 +219,7 @@
     align-items: center;
     border-radius: 5px;
     color: var(--color-base-1);
-    background: var(--color-base-3);
+    background: var(--color-base-4);
     box-shadow: var(--box-shadow-3);
 }
 .content-info-dados h3 {
@@ -273,6 +273,9 @@
 .container-support {
     padding: 10px 0px;
     justify-content: space-evenly;
+    width: 92%;
+    margin: 10px 0px;
+    border-radius: 15px;
     background: var(--color-white-1);
 }
 .content-support {

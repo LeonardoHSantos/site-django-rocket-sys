@@ -9,6 +9,7 @@ header,
     align-items: center;
 }
 header {
+    width: 100%;
     top: 0;
     height: 50px;
     position: sticky;
@@ -21,7 +22,7 @@ header {
     z-index: 999;
 }
 .logo-navbar {
-    width: 69px;
+    width: 120px;
     height: 60px;
     box-sizing: border-box;
     justify-content: center;
@@ -29,7 +30,7 @@ header {
     padding: 5px;
 }
 .logo-navbar img {
-    max-width: 102px;
+    max-width: 142px;
     max-height: 65px;
     border-radius: 3px;
     margin-left: 33px;

@@ -10,7 +10,8 @@
 
     --color-base-1: #fbfaf2;
     --color-base-2: #dcd0e163;
-    --color-base-3: #0000ff;  
+    --color-base-3: #0000ff;
+    --color-base-4: #1d50e7;
     
     --color-gradient-1:  linear-gradient(90deg, rgba(63,187,97,1) 0%, rgba(10,59,45,1) 0%, rgba(3,54,97,1) 100%);
     --color-gradient-2: radial-gradient(circle, rgb(255 255 255) 0%, rgb(14 43 249) 0%, rgb(178 0 243) 100%);
@@ -37,6 +38,11 @@ body {
     font-family: 'Poppins', sans-serif;
     max-width: 100%;
     overflow-x: hidden;
+    background: var(--color-gradient-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 a {
     text-decoration: none;

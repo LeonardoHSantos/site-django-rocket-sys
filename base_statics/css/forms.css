@@ -146,9 +146,9 @@
     max-width: 100%;
     overflow: hidden;
 }
-.form-image-decoration {
+/* .form-image-decoration {
     background: var(--color-white-1);
-}
+} */
 .form-image-decoration h3 {
     width: 100%;
     max-width: 100%;
