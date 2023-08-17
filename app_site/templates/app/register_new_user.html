@@ -5,7 +5,7 @@
 <div class="form-user">
     <div class="form-decoration">
         <div class="form-image-decoration">
-            <h3>Tudo começa com o primeiro passo.</h3>
+            <h3 id="info-banner-text"></h3>
             <div id="image-astro">
                 <img src="{% static 'imagem vetor 2089.png' %}" alt="">
             </div>
@@ -76,5 +76,19 @@
 
 <script src="{% static 'check_input.js' %}"></script>
 <script src="{% static 'createAccount.js' %}"></script>
+<script>
+    var texto_2 = "Tudo começa com o primeiro passo.";
+    var i_2 = 0;
+    var speed_2 = 45;
+    function typeWriter_2() {
+        if (i_2 < texto_2.length) {
+            document.querySelector("#info-banner-text").innerHTML += texto_2.charAt(i_2);
+            i_2++;
+            setTimeout(typeWriter_2, speed_2);
+        }
+        document.querySelector(".card-100").classList.add("classAnimate_open");
+    }
+    typeWriter_2()
+</script>
 
 {% endblock %}

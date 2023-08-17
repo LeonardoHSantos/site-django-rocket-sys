@@ -39,6 +39,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background: var(--color-gradient-4);
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;

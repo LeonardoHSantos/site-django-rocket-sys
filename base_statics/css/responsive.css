@@ -1,7 +1,10 @@
 
 
-.menu-mobile-menu {
+.container-navbar-mobile {
     display: none;
+}
+.col-revert {
+    flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 1145px) {
@@ -36,77 +39,20 @@
     }
 }
 @media only screen and (max-width: 768px) {
-    .menu-mobile {
-        display: flex;
-    }
-    header {
-        background: var(--color-base-1);
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 1s;
-        top: 0;
-        -webkit-transition: all 0.1s ease-in-out;
-    }
-    .menu-opcoes-dropdown {
-        display: flex;
-        height: auto;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: translate(0%, -32%);
-    }
-    .menu-mobile {
-        position: absolute;
-        top: 27px;
-        right: 27px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-    }
-    .container-navbar,
-    .navbar-area-usuario {
+    .container-navbar {
         display: none;
-    }
-    .menu-mobile-menu,
-    .container-navbar-mobile {
-        display: none;
-    }
-    .menu-mobile-menu.active,
-    .container-navbar-mobile.active {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .navbar-area-usuario-mobile.active {
-        display: flex !important;
-    }
-    .menu-mobile-menu.active {
-        overflow: hidden;
-        transition: 1s ease-in-out;
-        animation: grow .6s ease-in-out;
     }
 
-    @keyframes grow {
-        0% {
-            transition: .3s ease;
-            height: 0px;
-        }
-        55% {
-            transition: .5s ease;
-            height: 305px;
-        }
-        60% {
-            transition: .3s ease;
-            height: 355px;
-        }
-        100% {
-            transition: .3s ease;
-            height: auto;
-        }
+    .container-navbar-mobile {
+        background-color: aqua;
     }
+
+    
+
+
+
+    
+    
 
 
     .info-image-bunner {
@@ -139,7 +85,4 @@
     }
  
 
-}
-.col-revert {
-    flex-direction: row-reverse;
 }

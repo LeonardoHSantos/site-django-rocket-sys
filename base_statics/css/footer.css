@@ -90,4 +90,5 @@
     color: var(--color-dark-1);
     background: var(--color-base-1);
     border-top: 1px solid #a8acad7a;
+    text-align: center;
 }
