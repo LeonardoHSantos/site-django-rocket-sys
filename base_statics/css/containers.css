@@ -24,15 +24,76 @@
     margin: 0px 10px;
     min-height: 240px;
     flex-direction: column;
-    /* background-color: rgb(2, 2, 2); */
 }
+
+
+
+.container-principal-banner,
+.block-principal-banner-text {
+    width: 97%;
+    display: flex;
+}
+.container-principal-banner {
+    margin: 10px 0px;
+    min-height: 280px;
+    flex-wrap: wrap;
+    background-color: var(--color-base-4);
+}
+.block-principal-banner-text {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.block-principal-banner-text h1 {
+    font-weight: 800;
+    background-image: linear-gradient(to right, #f7f7fd, #bdff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.block-principal-banner-text p {
+    color: #ffffff;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.block-icons-banner-principal-text {
+    padding: 5px 0px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.block-icons-banner-principal-text i {
+    color: #ffde56;
+    background: #356f9f;
+    font-size: 28px;
+    padding: 10px 2px;
+    border-radius: 50%;
+    width: 45px;
+    text-align: center;
+    border: 2px solid #efd81d;
+}
+.block-icons-banner-principal-text > .fa-js {
+    color: #efd81d;
+}
+
+
+
 .container-info-banner {
     width: 100%;
     text-align: start;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 35px;
 }
 .info-banner {
     width: 348px;
@@ -78,16 +139,28 @@
 .info-texto-banner-2 {
     width: 100%;
     text-align: center;
-    /* border: 1px solid var(--color-dark-3); */
 }
 
 
 .info-image-bunner {
+    width: 98%;
+    min-height: 256px;
     max-width: 100%;
     margin: 10px;
     border-radius: 5px;
     box-shadow: var(--box-shadow-1);
     background: var(--color-base-1);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+
+
+.content-info-image-bunner {
+    width: 100%;
+    text-align: center;
 }
 .info-image-bunner img {
     max-width: 100%;
@@ -135,6 +208,7 @@
 }
 .container-info-dados h3 {
     color: var(--color-base-1);
+    text-align: center;
 }
 .container-info-dados h1 {
     font-size: 35px;

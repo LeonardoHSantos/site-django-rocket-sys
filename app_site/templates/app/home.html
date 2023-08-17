@@ -2,30 +2,40 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block content %}
+<div class="container-principal-banner">
+    <div class="block-principal-banner-text">
+        <h1>Desenvolvimento de sistemas web de forma <b>ágil</b>.</h1>
+        <p id="content-parag-banner"></p>
+        <div class="block-icons-banner-principal-text">
+            <i class="fa-brands fa-python"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-sharp fa-solid fa-database"></i>
+            <i class="fa-solid fa-chart-simple"></i>
+        </div>
+    </div>
+</div>
 <div class="container-principal display-flex all-center">
+
+
     <div class="container-banner-principal">
         <div class="info-texto-banner-2">
                 <div class="container-info-banner">
-                    <div class="info-texto-banner-1">
-                        <h3>Desenvolvimento de sistemas web de forma <b>ágil</b>.</h3>
-                        <div class="link-info-banner-1">
-                            <a href="#">ver mais</a>
-                        </div>
-                </div>
-                <div class="info-image-bunner">
-                    <div>
-                        <h3 style="margin: 10px;">Tire seu projeto do papel</h3>
-                        <p style="margin: 10px;"><b>é a hora</b>, selecione uma opção abaixo e conte o que você precisa:</p>
-                        <div class="container-info-banner">
-                            <div class="info-banner option-1-info-banner">
-                                <p><b>direto ao ponto</b>, já sabe o que precisa?</p>
-                            </div>
-                            <div class="info-banner">
-                                <p><b>está com dúvidas?</b> te ajudamos a iniciar.</p>
+                    <div class="info-image-bunner">
+                        <div class="content-info-image-bunner">
+                            <h3 style="margin: 10px;">Tire seu projeto do papel</h3>
+                            <p style="margin: 10px;"><b>é a hora</b>, selecione uma opção e conte o que você precisa:</p>
+                            <div class="container-info-banner">
+                                <div class="info-banner option-1-info-banner">
+                                    <p><b>direto ao ponto</b>, já sabe o que precisa?</p>
+                                </div>
+                                <div class="info-banner">
+                                    <p><b>está com dúvidas?</b> te ajudamos a iniciar.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
@@ -136,7 +146,19 @@
 </div>
 
 
-
+<script>
+    var i_parag = 0;
+    var speed = 20;
+    var texto_parag = "Tire seus projetos do papel... ";
+    function typeWriter_ParagBanner() {
+        if (i_parag < texto_parag.length) {
+            document.querySelector("#content-parag-banner").innerHTML += texto_parag.charAt(i_parag);
+            i_parag++;
+            setTimeout(typeWriter_ParagBanner, speed);
+        }
+    }
+    typeWriter_ParagBanner();
+</script>
 
 
 <script>
